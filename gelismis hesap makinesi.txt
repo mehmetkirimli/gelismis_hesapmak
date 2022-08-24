@@ -1,0 +1,130 @@
+import java.util.Scanner;
+
+public class main {
+    static int sum(int a, int b) {
+        return a + b;
+    }
+
+    static int ex(int a, int b) {
+        return a - b;
+    }
+
+    static int multi(int a, int b) {
+        return a * b;
+    }
+
+    static int div(int a, int b) {
+        return a / b;
+    }
+
+    static int pow(int a, int b) {
+        int result = 1;
+        for (int i = 1; i <= b; i++) {
+            result = result * a;
+        }
+        return result;
+    }
+
+    static int mod(int a, int b) {
+        return a % b;
+    }
+
+    static void dikdt(int a, int b) {
+       System.out.println("cevre = " + (2*(a+b)));
+       System.out.println("alan : " + (a*b));
+    }
+
+
+    public static void main(String[] args) {
+
+        System.out.println("Hangi islemi yapmak istersiniz ? ");
+        System.out.println("             ");
+        System.out.println("    1-Toplama");
+        System.out.println("    2-Cikartma");
+        System.out.println("    3-Carpma");
+        System.out.println("    4-Bolme");
+        System.out.println("    5-Uslu Sayi");
+        System.out.println("    6-Mod Alma");
+        System.out.println("    7-Dikdortgen Alan ve Cevre");
+        System.out.println("    0-Cikis");
+
+        Scanner bjk = new Scanner(System.in);
+        int select = bjk.nextInt();
+
+        if (select != 0) {
+
+
+            switch (select) {
+                case 1:
+                    int a, b;
+
+                    System.out.println("Sayi giriniz :");
+                    a = bjk.nextInt();
+                    System.out.println("2.Sayiyi giriniz :");
+                    b = bjk.nextInt();
+                    System.out.println("Sonuc = " + sum(a, b));
+                    break;
+
+
+                case 2:
+
+                    System.out.println("Sayi giriniz :");
+                    a = bjk.nextInt();
+                    System.out.println("2.Sayiyi giriniz :");
+                    b = bjk.nextInt();
+                    System.out.println("Sonuc = " + ex(a, b));
+                    break;
+
+                case 3:
+
+                    System.out.println("Sayi giriniz :");
+                    a = bjk.nextInt();
+                    System.out.println("2.Sayiyi giriniz :");
+                    b = bjk.nextInt();
+                    System.out.println("Sonuc = " + multi(a, b));
+                    break;
+
+
+                case 4:
+
+                    System.out.println("Sayi giriniz :");
+                    a = bjk.nextInt();
+                    System.out.println("2.Sayiyi giriniz :");
+                    b = bjk.nextInt();
+                    System.out.println("Sonuc = " + div(a, b));
+                    break;
+
+                case 5:
+
+                    System.out.println("Sayi giriniz : ");
+                    a = bjk.nextInt();
+                    System.out.println("Ust giriniz : ");
+                    b = bjk.nextInt();
+                    System.out.println("Sonuc = " + pow(a, b));
+                    break;
+
+
+                case 6:
+
+                    System.out.println("Sayi giriniz : ");
+                    a = bjk.nextInt();
+                    System.out.println("mod giriniz : ");
+                    b = bjk.nextInt();
+                    System.out.println("Cevap = " + mod(a, b));
+                    break;
+
+                case 7:
+
+                    System.out.println("Kisa Kenar : ");
+                    a = bjk.nextInt();
+                    System.out.println("Uzun kenar : ");
+                    b = bjk.nextInt();
+                    dikdt(a, b);
+                    break;
+
+            }
+        } else {
+            return;
+        }
+    }
+}
